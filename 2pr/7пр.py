@@ -1,8 +1,10 @@
 # -- coding: utf-8 --
-def year(D):
-    if (D % 4 == 0 or D % 400 == 0) and D % 100 != 0:
-        return 'Да'
+def year():
+    print("Введите год")
+    y = int(input())
+    if (y % 4 == 0) and (y % 100 > 0) or (y % 400 == 0):
+        return 'да'
     else:
-        return 'Нет'
-print(year(int(input("Введите год: "))))
+        return 'нет'
 
+print (year())
