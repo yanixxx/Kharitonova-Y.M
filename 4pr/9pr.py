@@ -1,6 +1,8 @@
 # -- coding: utf-8 --
 
-def str(s, symboldelete):
-    s = s.replace(symboldelete, '')
-    print(s)
-str(input('строка: '), input('удалить символ: '))
+def strk():
+	s=str(input('строка: '))
+	z=str(input('символ: '))
+	a=(s.replace(z,''))
+	return a
+print(strk())

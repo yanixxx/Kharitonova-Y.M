@@ -1,6 +1,8 @@
 # -- coding: utf-8 --
 
-def str(s):
-    s = s.strip()
-    print(s.count(' ') + 1)
-str(input('строка: '))
+def strk():
+	s=str(input('Введите строку '))
+	a=(s.count(" ")+1)
+	return a
+print(strk())
+

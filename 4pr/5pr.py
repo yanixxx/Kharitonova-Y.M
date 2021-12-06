@@ -1,10 +1,13 @@
 # -- coding: utf-8 --
 
-def str(s):
-    if s.count('f') == 1:
-        print(s.find('f'))
-    elif s.count('f') > 1:
-        print(s.find('f'), s.rfind('f'))
-    else:
-        return ''
-str(input('строка: '))
+def strk():
+	s=str(input('строка: '))
+	if s.count('f')==1:
+		a=s.find('f')
+		return a
+	elif s.count('f')>=2:
+		b=(s.find('f'),s.rfind('f'))
+		return b
+	else:
+		return 	
+print(strk())

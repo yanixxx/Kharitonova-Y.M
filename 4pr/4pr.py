@@ -1,5 +1,6 @@
-# -- coding: utf-8 --
+# -*- coding: utf-8 -*-
 
-def str(s):
-    print(s[s.find(' ') + 1:], s[:s.find(' ')])
-str(input('Строка: '))
+s = input()
+f_w = s[:s.find(' ')]
+s_w = s[s.find(' ') + 1:]
+print(s_w + ' ' + f_w)
