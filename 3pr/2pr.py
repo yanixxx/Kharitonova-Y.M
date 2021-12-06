@@ -1,10 +1,14 @@
-# -- coding: utf-8 --
+# -*- coding: utf-8 -*-
 
-def n2(A, B):
-    if A < B:
-        for i in range(A, B + 1):
-            print(i, end=' ')
+def ABtoBA():
+    a = int(input("A: "))
+    b = int(input("B: "))
+    if a < b:
+        for i in range(a, b+1):
+            print(i)
     else:
-        for i in range(A, B - 1, -1):
-            print(i, end=' ')
-n2(int(input('A: ')), int(input('B: ')))
+        for i in range(a, b-1, -1):
+            print(i)
+            
+    return "Завершение"
+print(ABtoBA())

@@ -1,10 +1,17 @@
-# -- coding: utf-8 --
+# -*- coding: utf-8 -*-
 
-def fib(n, k):
-    G1, G2 = 1, 1
-    m = [G1, G2]
-    for i in range(2, n):
-        G1, G2 = G2, G1 + G2
-        m.append(G2)
-    print(sum(m[k-1:]))  
-fib(int(input('Кол-во чисел из ряда: ')), int(input('Номер с которого начать: ')))
+def s_f():
+    N = int(input("N: "))
+    k = int(input("k: "))
+    past_num = 0
+    present_num = 1
+    sumn = 0
+    for i in range(2, N+1):
+        if k <= i:
+            sumn += present_num
+        time = present_num
+        present_num += past_num
+        past_num = time
+    return sumn
+
+print(s_f())

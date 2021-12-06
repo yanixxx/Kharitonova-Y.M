@@ -1,8 +1,6 @@
-# -- coding: utf-8 --
+# -*- coding: utf-8 -*-
 
-def necht(A, B):
-    if A > B:
-        for i in range(A, B - 1, -1):
-            if i % 2 != 0:
-                print(i, end=' ')
-necht(int(input('A: ')), int(input('B: ')))
+A = int(input("A: "))
+B = int(input("B: "))
+for i in range(A - A % 2 -1, B -1, -2):
+    print(i)
