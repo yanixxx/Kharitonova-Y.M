@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
 
 def n1():
-    i = 0
-    N = int(input("Введите число - "))
-    while i <= N:
+    while True:
+        i = 0
+        n = input("Введите число - ")
+        if n.isdigit() == False:
+            print("НЕДОПУСТИМОЕ ЗНАЧЕНИЕ\n")
+        else:
+            break
+    while i <= int(n):
         print(i * i)
         i+=1
 
 n1()
+   

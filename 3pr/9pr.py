@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 
-n = int (input("Номер элемента ряда Фибоначчи: " ))
-fib1 = 1
-fib2 = 1
-i = 0
-while i < n - 2:
-    fibsum = fib1 + fib2
-    fib1 = fib2
-    fib2 = fibsum
-    i = i + 1
-print("Значение этого элемента:", fib2)
+def s_f():
+    sum=0
+    N = int(input('N: '))
+    past_num = 0
+    present_num = 1
+    for i in range(2, N+1):
+        sum += present_num
+        time = present_num
+        present_num += past_num
+        past_num = time
+
+    return sum
+print(s_f())

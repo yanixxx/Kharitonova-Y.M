@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 
 def n6():
-    k_num = 0
-    summ = 0
+    matr = []
     while True:
-        x = int(input("Число - "))
-        if x == 0:
+        i = 0
+        n = input("Введите число - ")
+        if n.isdigit() == False:
+            print("НЕДОПУСТИМОЕ ЗНАЧЕНИЕ\n")
             break
-        k_num += 1
-        summ += x
-    print(summ / k_num)
+        if n == "0":
+            break
+        else:
+            matr.append(int(n))
+
+    print(sum(matr)/len(matr))
 
 n6()

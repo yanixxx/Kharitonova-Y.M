@@ -5,7 +5,14 @@ def n8():
     maxStreak = 0
     loopCount = 0
     while True:
-        x = int(input("Введите число - "))
+        while True:
+            x = input("Введите число - ")
+            if x.isdigit() == False:
+                print("НЕДОПУСТИМОЕ ЗНАЧЕНИЕ\n")
+            else:
+                break
+        x=int(x)
+        
         if x == 0:
             break
         if(loopCount != 0):
